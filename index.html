@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horoscope Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="celestial-background">
+        <div class="stars"></div>
+        <div class="planets">
+            <div class="planet planet-1">☉</div>
+            <div class="planet planet-2">☽</div>
+            <div class="planet planet-3">♂</div>
+            <div class="planet planet-4">♀</div>
+            <div class="planet planet-5">♃</div>
+            <div class="planet planet-6">♄</div>
+        </div>
+        <div class="constellations">
+            <div class="constellation">✦</div>
+            <div class="constellation">✧</div>
+            <div class="constellation">✩</div>
+        </div>
+    </div>
+        <svg class="shiva-image" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="swastikGlow">
+                    <feGaussianBlur stdDeviation="8"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                <filter id="binduGlow">
+                    <feGaussianBlur stdDeviation="12"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                <filter id="divineRays">
+                    <feGaussianBlur stdDeviation="4"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:#ffff99;stop-opacity:0.9"/>
+                    <stop offset="50%" style="stop-color:#ffd700;stop-opacity:0.6"/>
+                    <stop offset="100%" style="stop-color:#d4af37;stop-opacity:0.2"/>
+                </radialGradient>
+                <radialGradient id="rayGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8"/>
+                    <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0.1"/>
+                </radialGradient>
+            </defs>
+            
+            <!-- Divine Rays Background -->
+            <g opacity="0.3">
+                <ellipse cx="350" cy="50" rx="200" ry="30" fill="url(#rayGlow)" transform="rotate(0 350 50)"/>
+                <ellipse cx="650" cy="350" rx="200" ry="30" fill="url(#rayGlow)" transform="rotate(90 650 350)"/>
+                <ellipse cx="350" cy="650" rx="200" ry="30" fill="url(#rayGlow)" transform="rotate(180 350 650)"/>
+                <ellipse cx="50" cy="350" rx="200" ry="30" fill="url(#rayGlow)" transform="rotate(270 50 350)"/>
+            </g>
+            
+            <!-- Multiple Sacred Circles -->
+            <circle cx="350" cy="350" r="320" fill="none" stroke="#ffd700" stroke-width="6" opacity="0.3"/>
+            <circle cx="350" cy="350" r="310" fill="none" stroke="#d4af37" stroke-width="5" opacity="0.4" stroke-dasharray="25,15"/>
+            <circle cx="350" cy="350" r="300" fill="none" stroke="#ffff99" stroke-width="4" opacity="0.3"/>
+            <circle cx="350" cy="350" r="290" fill="none" stroke="#ffd700" stroke-width="3" opacity="0.2" stroke-dasharray="20,20"/>
+            
+            <!-- Central Divine Energy Field -->
+            <circle cx="350" cy="350" r="180" fill="url(#centerGlow)" opacity="0.4"/>
+            <circle cx="350" cy="350" r="160" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.6" stroke-dasharray="10,5"/>
+            
+            <!-- Sacred Sanskrit Mantra Above -->
+            <text x="350" y="60" font-size="36" text-anchor="middle" fill="#ffd700" opacity="0.9" font-weight="bold" filter="url(#swastikGlow)">ॐ नमः शिवाय</text>
+            <text x="350" y="90" font-size="24" text-anchor="middle" fill="#d4af37" opacity="0.8">Om Namah Shivaya</text>
+            
+            <!-- Sacred Swastik with Enhanced Details -->
+            <g filter="url(#swastikGlow)" stroke="#d4af37" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Central Cross with Embossed Effect -->
+                <rect x="330" y="120" width="40" height="460" fill="#ffd700" stroke="#d4af37" stroke-width="5"/>
+                <rect x="120" y="330" width="460" height="40" fill="#ffd700" stroke="#d4af37" stroke-width="5"/>
+                
+                <!-- Top-Right Hook with Sacred Geometry -->
+                <path d="M 370 120 L 470 120 L 470 160" fill="#ffd700" stroke="#d4af37" stroke-width="5"/>
+                <path d="M 370 120 L 370 160 L 470 160" fill="none" stroke="#b8860b" stroke-width="2" opacity="0.7"/>
+                
+                <!-- Bottom-Right Hook with Sacred Geometry -->
+                <path d="M 530 370 L 530 470 L 490 470" fill="#ffd700" stroke="#d4af37" stroke-width="5"/>
+                <path d="M 490 370 L 530 370 L 490 470" fill="none" stroke="#b8860b" stroke-width="2" opacity="0.7"/>
+                
+                <!-- Bottom-Left Hook with Sacred Geometry -->
+                <path d="M 330 530 L 230 530 L 230 490" fill="#ffd700" stroke="#d4af37" stroke-width="5"/>
+                <path d="M 330 490 L 330 530 L 230 490" fill="none" stroke="#b8860b" stroke-width="2" opacity="0.7"/>
+                
+                <!-- Top-Left Hook with Sacred Geometry -->
+                <path d="M 170 330 L 170 230 L 210 230" fill="#ffd700" stroke="#d4af37" stroke-width="5"/>
+                <path d="M 170 330 L 210 330 L 210 230" fill="none" stroke="#b8860b" stroke-width="2" opacity="0.7"/>
+            </g>
+            
+            <!-- Enhanced Center Red Bindu with Divine Energy -->
+            <circle cx="350" cy="350" r="30" fill="#ff3333" stroke="#ffd700" stroke-width="5" filter="url(#binduGlow)"/>
+            <circle cx="350" cy="350" r="22" fill="#ff5555"/>
+            <circle cx="350" cy="350" r="15" fill="#ff7777"/>
+            <circle cx="350" cy="350" r="8" fill="#ff9999"/>
+            <circle cx="350" cy="350" r="3" fill="#ffbbbb"/>
+            
+            <!-- Sacred Om Symbol Below -->
+            <text x="350" y="620" font-size="48" text-anchor="middle" fill="#ffd700" opacity="0.9" font-weight="bold" filter="url(#swastikGlow)">ॐ</text>
+            
+            <!-- Lotus Petals Around the Symbol -->
+            <g opacity="0.5" filter="url(#divineRays)">
+                <ellipse cx="350" cy="80" rx="20" ry="35" fill="#ffd700" transform="rotate(0 350 80)"/>
+                <ellipse cx="520" cy="350" rx="20" ry="35" fill="#ffd700" transform="rotate(90 520 350)"/>
+                <ellipse cx="350" cy="620" rx="20" ry="35" fill="#ffd700" transform="rotate(180 350 620)"/>
+                <ellipse cx="180" cy="350" rx="20" ry="35" fill="#ffd700" transform="rotate(270 180 350)"/>
+            </g>
+            
+            <!-- Cardinal Points Sacred Symbols -->
+            <g filter="url(#swastikGlow)">
+                <circle cx="350" cy="25" r="18" fill="#ffd700"/>
+                <text x="350" y="32" font-size="16" text-anchor="middle" fill="#1a0033" font-weight="bold">↑</text>
+                
+                <circle cx="675" cy="350" r="18" fill="#ffd700"/>
+                <text x="675" y="357" font-size="16" text-anchor="middle" fill="#1a0033" font-weight="bold">→</text>
+                
+                <circle cx="350" cy="675" r="18" fill="#ffd700"/>
+                <text x="350" y="682" font-size="16" text-anchor="middle" fill="#1a0033" font-weight="bold">↓</text>
+                
+                <circle cx="25" cy="350" r="18" fill="#ffd700"/>
+                <text x="25" y="357" font-size="16" text-anchor="middle" fill="#1a0033" font-weight="bold">←</text>
+            </g>
+            
+            <!-- Corner Sacred Symbols -->
+            <g filter="url(#swastikGlow)">
+                <circle cx="80" cy="80" r="15" fill="#d4af37" opacity="0.9"/>
+                <text x="80" y="87" font-size="12" text-anchor="middle" fill="#ffd700" font-weight="bold">॰</text>
+                
+                <circle cx="620" cy="80" r="15" fill="#d4af37" opacity="0.9"/>
+                <text x="620" y="87" font-size="12" text-anchor="middle" fill="#ffd700" font-weight="bold">॰</text>
+                
+                <circle cx="80" cy="620" r="15" fill="#d4af37" opacity="0.9"/>
+                <text x="80" y="627" font-size="12" text-anchor="middle" fill="#ffd700" font-weight="bold">॰</text>
+                
+                <circle cx="620" cy="620" r="15" fill="#d4af37" opacity="0.9"/>
+                <text x="620" y="627" font-size="12" text-anchor="middle" fill="#ffd700" font-weight="bold">॰</text>
+            </g>
+            
+            <!-- Small Sacred Dots in Sacred Geometry Pattern -->
+            <g opacity="0.6" fill="#ffd700">
+                <circle cx="200" cy="200" r="5"/>
+                <circle cx="500" cy="200" r="5"/>
+                <circle cx="200" cy="500" r="5"/>
+                <circle cx="500" cy="500" r="5"/>
+                <circle cx="140" cy="350" r="4"/>
+                <circle cx="560" cy="350" r="4"/>
+                <circle cx="350" cy="140" r="4"/>
+                <circle cx="350" cy="560" r="4"/>
+            </g>
+            
+            <!-- Divine Energy Particles -->
+            <g opacity="0.4" fill="#ffff99">
+                <circle cx="250" cy="150" r="3"/>
+                <circle cx="450" cy="150" r="3"/>
+                <circle cx="150" cy="250" r="3"/>
+                <circle cx="550" cy="250" r="3"/>
+                <circle cx="150" cy="450" r="3"/>
+                <circle cx="550" cy="450" r="3"/>
+                <circle cx="250" cy="550" r="3"/>
+                <circle cx="450" cy="550" r="3"/>
+            </g>
+        </svg>
+    </div>
+    <div class="container">
+        <h1>✨ Find Your Horoscope ✨</h1>
+        <p class="subtitle">Discover your cosmic destiny</p>
+        <form id="horoscope-form">
+            <label for="place-of-birth">Place of Birth:</label>
+            <input type="text" id="place-of-birth" required>
+
+            <label for="time-of-birth">Time of Birth:</label>
+            <input type="time" id="time-of-birth" required>
+
+            <label for="date-of-birth">Date of Birth:</label>
+            <input type="date" id="date-of-birth" required>
+
+            <button type="submit">Get Horoscope</button>
+        </form>
+        <div id="horoscope-result" class="result"></div>
+    </div>
+
+    <!-- Mystical Audio (placeholder - would need actual audio files) -->
+    <audio id="mystical-chime" preload="auto">
+        <source src="sounds/chime.mp3" type="audio/mpeg">
+        <source src="sounds/chime.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="cosmic-ambience" loop preload="auto">
+        <source src="sounds/cosmic-ambience.mp3" type="audio/mpeg">
+        <source src="sounds/cosmic-ambience.ogg" type="audio/ogg">
+    </audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
